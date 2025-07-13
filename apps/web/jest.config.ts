@@ -1,5 +1,11 @@
-/* eslint-disable */
-export default {
+import type { Config } from 'jest';
+import nextJest from 'next/jest.js';
+
+const createJestConfig = nextJest({
+  dir: './',
+});
+
+const config: Config = {
   displayName: '@scheduling-app/web',
   preset: '../../jest.preset.js',
   transform: {
@@ -9,3 +15,5 @@ export default {
   coverageDirectory: '../../coverage/apps/web',
   testEnvironment: 'jsdom',
 };
+
+export default createJestConfig(config);
