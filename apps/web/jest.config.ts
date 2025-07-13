@@ -1,6 +1,5 @@
-import type { Config } from 'jest';
-
-const config: Config = {
+/* eslint-disable */
+export default {
   displayName: '@scheduling-app/web',
   preset: '../../jest.preset.js',
   transform: {
@@ -9,7 +8,4 @@ const config: Config = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/apps/web',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
 };
-
-export default config;
