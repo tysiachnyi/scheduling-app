@@ -2,7 +2,6 @@ import fetch from 'node-fetch';
 import { GistResponse, SlackMessage } from './types';
 import { format, isGitHubActions, rotate } from './utils';
 import { config } from 'dotenv';
-
 config();
 
 const SLACK_WEBHOOK_URL = process.env.SLACK_WEBHOOK_URL as string;
